@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Code Converter</title>
-  <script src="converter.js"></script>
+  <title>Text Converter</title>
   <style>
     .container {
       display: flex;
@@ -29,23 +28,6 @@
     <textarea id="convertedCode" readonly></textarea>
   </div>
 
-  <script>
-    const convertBtn = document.getElementById("convertBtn");
-    const codeInput = document.getElementById("codeInput");
-    const convertedCode = document.getElementById("convertedCode");
-
-    convertBtn.addEventListener("click", () => {
-      const inputCode = codeInput.value;
-      const converted = convertCode(inputCode);
-      convertedCode.value = converted;
-    });
-
-    function convertCode(code) {
-      // Write your conversion logic here
-      // For example, replacing all occurrences of 'var' with 'let'
-      const convertedCode = code.replace(/var/g, 'let');
-      return convertedCode;
-    }
-  </script>
+  <script src="converter.js"></script>
 </body>
 </html>
