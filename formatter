@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code Converter</title>
+  <script src="converter.js"></script>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    textarea {
+      width: 400px;
+      height: 200px;
+      padding: 10px;
+      resize: none;
+    }
+    #convertBtn {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <textarea id="codeInput" placeholder="Enter code"></textarea>
+    <button id="convertBtn">Convert</button>
+    <textarea id="convertedCode" readonly></textarea>
+  </div>
+
+  <script>
+    const convertBtn = document.getElementById("convertBtn");
+    const codeInput = document.getElementById("codeInput");
+    const convertedCode = document.getElementById("convertedCode");
+
+    convertBtn.addEventListener("click", () => {
+      const inputCode = codeInput.value;
+      const converted = convertCode(inputCode);
+      convertedCode.value = converted;
+    });
+
+    function convertCode(code) {
+      // Write your conversion logic here
+      // For example, replacing all occurrences of 'var' with 'let'
+      const convertedCode = code.replace(/var/g, 'let');
+      return convertedCode;
+    }
+  </script>
+</body>
+</html>
