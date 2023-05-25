@@ -1,55 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Text Converter</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    textarea {
-      width: 100%;
-      height: 200px;
-      padding: 10px;
-      resize: none;
-    }
-
-    #convertBtn {
-      padding: 10px;
-      margin-top: 10px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantUML Formatter</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        textarea {
+            width: 45%;
+            height: 80vh;
+            padding: 15px;
+            font-family: monospace;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <textarea id="codeInput" placeholder="Enter code"></textarea>
-    <button id="convertBtn">Convert</button>
-    <textarea id="convertedCode" readonly></textarea>
-  </div>
-
-  <script>
-    function formatContent(content) {
-      // Your formatting logic here
-    }
-
-    const convertBtn = document.getElementById("convertBtn");
-    const codeInput = document.getElementById("codeInput");
-    const convertedCode = document.getElementById("convertedCode");
-
-    convertBtn.addEventListener("click", () => {
-      const inputCode = codeInput.value;
-      const converted = formatContent(inputCode);
-      convertedCode.value = converted;
-    });
-  </script>
+    <textarea id="codeInput" placeholder="Paste your PlantUML code here"></textarea>
+    <button id="convertBtn">Format Code</button>
+    <textarea id="convertedCode" placeholder="Your formatted PlantUML code will appear here" readonly></textarea>
+    <script src="converter.js"></script>
 </body>
 </html>
