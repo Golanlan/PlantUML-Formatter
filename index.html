@@ -10,13 +10,15 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 95vh;
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
+            padding: 0;
+            margin: 0;
         }
         textarea {
             width: 45%;
-            height: 80vh;
+            height: 35vh;
             padding: 15px;
             font-family: monospace;
             font-size: 16px;
@@ -28,22 +30,31 @@
         button {
             padding: 10px 20px;
             font-size: 18px;
+            font-family: monospace;
             border: none;
             border-radius: 5px;
+            opacity: 1;
             cursor: pointer;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             background-color: #4CAF50;
             color: white;
+            margin-bottom: 5px;
         }
         button:hover {
             background-color: #45a049;
         }
+        
     </style>
 </head>
 <body>
-    <textarea id="codeInput" placeholder="Paste your PlantUML code here"></textarea>
+    <textarea id="codeInput" placeholder="Paste your PlantUML code here or drop a .puml file"></textarea>
     <button id="convertBtn">Format Code</button>
     <textarea id="convertedCode" placeholder="Your formatted PlantUML code will appear here" readonly></textarea>
-    <script src="converter.js"></script>
+    <button id="copyBtn">Copy Code</button>
+    <!-- <script src="converter.js"></script> -->
+    <script src="ui.js"></script>
+    <script src="core.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </body>
 </html>
