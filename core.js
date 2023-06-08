@@ -21,6 +21,8 @@ function formatContent(content) {
         if (
             trimmedLine.startsWith('group') ||
             trimmedLine.startsWith('alt') ||
+            trimmedLine.startsWith('network') ||
+	    trimmedLine.startsWith('nwdiag') ||
             trimmedLine.startsWith('opt') ||
             trimmedLine.startsWith('skinparam') ||
             trimmedLine === '{' ||
